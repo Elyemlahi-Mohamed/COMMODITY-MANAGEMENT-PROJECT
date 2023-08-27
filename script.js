@@ -157,6 +157,10 @@ function updatePro(i) {
     create.innerHTML = "update";
     tmp = i;
     mood = "update"
+    scroll({
+        top: 0,
+        behavior: "smooth"
+    })
 }
 // cancel Update
 function cancelUpdate() {
