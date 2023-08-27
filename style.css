@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background-color: #ffffff;
+}
+
+.container {
+    padding: 10px;
+    margin: 50px 160px;
+    text-align: center;
+    position: relative;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #0075ff;
+}
+
+.container input {
+    width: 100%;
+    margin: 12px 0;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input {
+    font-size: 16px;
+    border: solid 1.5px #9e9e9e;
+    border-radius: 5px;
+    background: none;
+    padding: 12px;
+    color: black;
+    transition: border 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.user-label {
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    left: 15px;
+    color: #5a5a5a;
+    pointer-events: none;
+    transform: translateY(27px);
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+    box-shadow: none;
+}
+
+.input:focus~label,
+input:valid~label {
+    transform: translateY(-12%) scale(0.8);
+    background-color: #e7e7e7;
+    border: 1px solid #0075ff;
+    padding: 0 0.2em;
+    color: #0075ff;
+    width: 200px;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.container .product-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.container .product-info .totalInner {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f73241;
+    color: white;
+    font-weight: 500;
+}
+
+.container .product-info .input-group {
+    margin-right: 30px;
+}
+
+.create {
+    width: 50%;
+    margin: 10px;
+}
+
+.delete {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.btnCreCan {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.delete,
+.cancel {
+    display: none;
+}
+
+button {
+    background-color: #e1e1e1;
+    color: #0075ff;
+    border: 1px solid #0075ff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+button:hover {
+    color: white;
+    transform: scale(1.05);
+
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #0075ff;
+    z-index: -1;
+    transition: all 0.5s linear;
+}
+
+button:hover::before {
+    width: 180%;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search .input-search {
+    width: 70%;
+}
+
+.search .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    width: 50%;
+}
+
+.search .buttons .search-title,
+.search-category {
+    width: 40%;
+    margin-top: 10px;
+}
+
+button {
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+table thead td {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: #315cfd;
+    color: white;
+    border: 1px solid #a0a0a0;
+}
+
+table tbody td {
+    background-color: #d8d7d7;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #a0a0a0;
+}
+
+table thead td:not(:first-child) {
+    border-left: none;
+}
+
+table tbody td:not(:first-child) {
+    border-left: none;
+    border-top: none;
+}
+
+table tbody td:nth-child(1) {
+    border-top: none;
+}
+
+table tbody .upda,
+.dele {
+    margin: 0;
+    padding: 6px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+/* media Query --------------------------------------- */
+@media (max-width: 1199px) {
+    .container {
+        margin: 50px 82px;
+    }
+
+    table thead td {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        margin: 50px 45px;
+    }
+    .container .product-info {
+        justify-content: center;
+    }
+
+    table thead td {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 767px) {
+    table thead td {
+        font-size: 11px;
+    }
+}
