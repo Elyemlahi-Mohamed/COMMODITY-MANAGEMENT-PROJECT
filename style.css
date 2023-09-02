@@ -307,10 +307,27 @@ table tbody .upda,
     table thead td {
         font-size: 11px;
     }
+
+    table tbody td {
+
+        padding: 2px;
+    }
 }
 
 @media (max-width: 767px) {
     table thead td {
         font-size: 11px;
+    }
+    .container .product-info {
+        display: block;
+    }
+
+    .container .product-info .input-group {
+        margin-right: 0;
+    }
+
+    .search .buttons {
+
+        width: 100%;
     }
 }
