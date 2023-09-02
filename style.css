@@ -297,7 +297,7 @@ table tbody .upda,
 
 @media (max-width: 991px) {
     .container {
-        margin: 50px 45px;
+        margin: 50px 25px;
     }
 
     .container .product-info {
@@ -328,7 +328,6 @@ table tbody .upda,
     }
 
     .search .buttons {
-
         width: 100%;
     }
 }
