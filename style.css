@@ -46,6 +46,7 @@ body {
 
 .input-group {
     position: relative;
+    border-radius: 5px;
 }
 
 .input {
