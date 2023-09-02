@@ -23,13 +23,12 @@
         <h1>commodity management project</h1>
 
 
+        <div class="note">Fill in the inputs bellow!</div>
+
         <div class="input-group">
             <input required="" type="text" autocomplete="off" class="input" id="title">
             <label class="user-label">Title</label>
         </div>
-
-
-
         <div class="product-info">
             <div class="input-group">
                 <input onkeyup="getTotal()" required="" type="number" autocomplete="off" class="input" id="price">
@@ -78,8 +77,7 @@
                     Category</button>
             </div>
             <div class="input-group input-search">
-                <input onkeyup="searchData(this.value)" required="" type="text" autocomplete="off" class="input"
-                    id="search">
+                <input onkeyup="searchData(this.value)" required="" type="text" autocomplete="off" class="input" id="search">
                 <label class="user-label" id="searchLabel">Search</label>
             </div>
         </div>
@@ -111,9 +109,11 @@
         </table>
 
 
-
-
-
+        <div class="overlay" id="overlay" onclick="SuccessOff()">
+            <div class="success" id="success">
+                <p id="Success" class="m-0"><strong>Successfully!</strong></p>
+            </div>
+        </div>
 
     </div>
 

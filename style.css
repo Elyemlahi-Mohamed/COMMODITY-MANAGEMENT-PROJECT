@@ -7,7 +7,8 @@
 
 
 body {
-    background-color: #ffffff;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .container {
@@ -20,7 +21,22 @@ body {
 .container h1 {
     text-transform: uppercase;
     margin-bottom: 30px;
-    color: #0075ff;
+    color: #fff;
+}
+
+.note {
+    background-color: #ffffcc;
+    width: 40%;
+    height: 40px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 14px;
+    border-radius: 10px;
+    letter-spacing: 1.3px;
+    display: none;
 }
 
 .container input {
@@ -34,12 +50,13 @@ body {
 
 .input {
     font-size: 16px;
-    border: solid 1.5px #9e9e9e;
+    outline: 3px solid #FEBF00;
+    border: 0;
     border-radius: 5px;
-    background: none;
+    background: #e2e2e2;
     padding: 12px;
     color: black;
-    transition: border 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
@@ -56,9 +73,8 @@ body {
 
 .input:focus,
 input:valid {
-    outline: none;
-    border: 1.5px solid #1a73e8;
-    box-shadow: none;
+    outline-offset: 5px;
+    background-color: #fff
 }
 
 .input:focus~label,
@@ -192,9 +208,14 @@ table thead td {
     font-weight: 700;
     text-transform: uppercase;
     padding: 10px;
-    background-color: #315cfd;
-    color: white;
+    background-color: #FEBF00;
+    color: #000;
     border: 1px solid #a0a0a0;
+}
+
+table tbody td:first-child {
+    background-color: #FEBF00;
+    font-weight: 700;
 }
 
 table tbody td {
@@ -226,6 +247,43 @@ table tbody .upda,
 }
 
 
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.success {
+    background-color: #ddffdd;
+    border-left: 20px solid #04AA6D;
+    width: 25%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.success strong {
+    color: #04AA6D;
+}
+
 /* media Query --------------------------------------- */
 @media (max-width: 1199px) {
     .container {
@@ -241,6 +299,7 @@ table tbody .upda,
     .container {
         margin: 50px 45px;
     }
+
     .container .product-info {
         justify-content: center;
     }

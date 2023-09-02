@@ -73,9 +73,27 @@ create.onclick = () => {
             document.getElementById("input-group").style.display = "flex";
         }
         clearData();
+        SuccessOn()
+
+    } else {
+        document.querySelector(".note").style.display = "flex";
     }
     localStorage.setItem("product", JSON.stringify(dataProduct));
     readData()
+}
+
+
+// Success Note On
+function SuccessOn() {
+    setTimeout(function () {
+        document.getElementById("overlay").style.display = "block";
+    }, 100)
+
+}
+
+// Success Note Off
+function SuccessOff() {
+    document.getElementById("overlay").style.display = "none";
 }
 
 
@@ -99,7 +117,7 @@ function readData() {
 
         table += `   
              <tr>
-                <td>${i + 1}</td>
+                <td>(${i + 1})</td>
                 <td>${dataProduct[i].title}</td>
                 <td>${dataProduct[i].price}</td>
                 <td>${dataProduct[i].taxes}</td>
